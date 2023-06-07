@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Box , Grid} from '@mui/material';
-import BasicDashBoardWidget from '../../widgets/useEffect/BasicDashboard';
 import NotesWidget from '../../widgets/Notes';
+import OnDemandDashBoardWidgetProps from '../../widgets/useEffect/OnDemandDashboard';
 
 const OnDemandHealthDashboardPage: FC = () => {
 
@@ -16,10 +16,10 @@ const OnDemandHealthDashboardPage: FC = () => {
         <Box sx={{ paddingTop: '6.25rem', paddingBottom: '3.125rem' }}>
             <Grid container spacing={1}>
                 <Grid item sm={6} xs={12}>
-                    <BasicDashBoardWidget patientCode= "UT3WUF" />
+                    <OnDemandDashBoardWidgetProps patientCode= "UT3WUF" />
                 </Grid>
                 <Grid item sm={6} xs={12}>
-                    <BasicDashBoardWidget patientCode="UT2LP0"/>
+                    <OnDemandDashBoardWidgetProps patientCode="UT2LP0"/>
                 </Grid>
             </Grid>
             <NotesWidget title="Paremeter Notes" bulletPoints={devNotes}/>
