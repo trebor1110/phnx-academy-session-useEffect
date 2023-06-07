@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import { CheckCircleOutline } from '@mui/icons-material';
-import {Box, Typography, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
+import { Box, Typography, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 
 interface NotesProps {
     title?: string;
@@ -12,14 +12,13 @@ const NotesWidget: FC<NotesProps> = ({ title, bulletPoints }) => {
     return (
         <Box display="flex" 
             flexDirection= "column" 
-            padding="10px" 
-            margin="20px auto" 
-            borderRadius="15px" 
+            padding="0.5rem" 
+            borderRadius="1.5rem" 
             boxShadow="0px 2px 4px #0000001a" 
             maxWidth="100%" 
             sx={{backgroundColor:'#ffffffcc', backdropFilter:'blur(10px)'}}>
             
-            <Typography variant="h4" color="primary" sx={{margin:'10px 20px'}}>
+            <Typography variant="h4" color="primary" sx={{margin:'1rem 1rem 0.5rem 1rem'}}>
                 {title ?? 'Notes'}
             </Typography>
 
@@ -29,7 +28,7 @@ const NotesWidget: FC<NotesProps> = ({ title, bulletPoints }) => {
                         <ListItemIcon>
                             <CheckCircleOutline color="primary" />
                         </ListItemIcon> 
-                        <ListItemText primary={bulletPoint} sx={{color:'#333', fontStyle:'italic', marginLeft: '-10px'}}/>
+                        <ListItemText primary={bulletPoint} sx={{color:'#333', fontStyle:'italic', marginLeft: '-1rem'}}/>
                     </ListItem>
                 ))}
             </List>

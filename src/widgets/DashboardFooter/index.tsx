@@ -10,7 +10,7 @@ const DashboardFooterWidget: React.FC<DashboardFooterWidgetProps> = ({ footerTex
         <Box sx={{
             backgroundColor: '#333',
             color: '#fff',
-            padding: '20px',
+            padding: '1rem',
             textAlign: 'center',
             position: 'fixed',
             bottom: '0',

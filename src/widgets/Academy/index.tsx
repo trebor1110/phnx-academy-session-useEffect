@@ -31,6 +31,18 @@ const useEffectsCard = [
         img: '/assets/card_sample.jpg',
         body: 'What is useEffect hook? Basic use of the useEffect hook.',
         link: '/academy/use-effect/basicHealthDashboard'
+    },
+    {
+        header: 'Health Dashboard (On Demand Version)',
+        img: '/assets/card_sample.jpg',
+        body: 'What are dependency parameters and how it affects the execution of useEffect? Ideal way on using the useEffect hook.',
+        link: '/academy/use-effect/onDemandHealthDashboard'
+    },
+    {
+        header: 'Health Dashboard (Chat Version)',
+        img: '/assets/card_sample.jpg',
+        body: 'Why is a cleanUp function important inside useEffect? Using Re-Mounting to show the importance of a cleanUp function.',
+        link: '/academy/use-effect/chatHealthDashboard'
     }
 ];
 
@@ -46,10 +58,9 @@ const WelcomeWidget: FC = () => {
                 </LearningModule>
                 <LearningModule header="useReducer show case" >Coming Soon....</LearningModule>
                 <LearningModule header="useEffect show case" >
-                    {
-                        useEffectsCard.map(( el, index ) => {
-                            return <LearningCard key={index} header={el.header} img={el.img} body={el.body} link={el.link} />;
-                        })}
+                    {useEffectsCard.map(( el, index ) => {
+                        return <LearningCard key={index} header={el.header} img={el.img} body={el.body} link={el.link} />;
+                    })}
                 </LearningModule>
             </Box>
         </>
