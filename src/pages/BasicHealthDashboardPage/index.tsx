@@ -1,8 +1,8 @@
 import React, {FC} from 'react';
 import SimpleDashboardWidget from '../../widgets/useEffect/SimpleDashboard';
 import DashboardHeaderWidget from '../../widgets/useEffect/DashboardHeader';
-import DashboardFooterWidget from '../../widgets/useEffect/DashboardFooter';
-import NotesWidget from '../../widgets/useEffect/Notes';
+import DashboardFooterWidget from '../../widgets/DashboardFooter';
+import NotesWidget from '../../widgets/Notes';
 import {Box} from '@mui/material';
 
 const BasicHealthDashboardPage: FC = () => {
@@ -14,6 +14,8 @@ const BasicHealthDashboardPage: FC = () => {
         'This sample will simulate an API call that returns every second. useEffect is used to setup the "API call" after everything is rendered. [See the code file SimpleDashBoardWidget]'
     ];
 
+    const footerTxt = 'ISAP DEC IMC Team | Phoenix Academy | v1.0.0.1';
+
     return (
         <Box>
             <Box sx={{ position: 'fixed', left: '0', right: '0', top: '0' }}>
@@ -22,10 +24,10 @@ const BasicHealthDashboardPage: FC = () => {
             
             <div style={{ paddingTop: '100px', paddingBottom: '50px' }}>
                 <SimpleDashboardWidget />
-                <NotesWidget notes={devNotes}/>
+                <NotesWidget title="Developer Notes" bulletPoints={devNotes}/>
             </div>
 
-            <DashboardFooterWidget />
+            <DashboardFooterWidget footerText={footerTxt} />
         </Box>
     );
 };
