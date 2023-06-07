@@ -24,7 +24,7 @@ const BasicHealthDashboardPage: FC = () => {
             
             <div style={{ paddingTop: '100px', paddingBottom: '50px' }}>
                 <SimpleDashboardWidget />
-                <NotesWidget title="Developer Notes" bulletPoints={devNotes}/>
+                <NotesWidget title="Basic Concepts Notes" bulletPoints={devNotes}/>
             </div>
 
             <DashboardFooterWidget footerText={footerTxt} />
